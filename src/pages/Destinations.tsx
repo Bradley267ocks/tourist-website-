@@ -10,20 +10,6 @@ export default function Destinations() {
       desc: "A lush volcanic island with a dramatic coastline and a heart of green. Home to the world's oldest living land animal (Jonathan the Tortoise) and the final home of Napoleon Bonaparte.",
       img: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2070&auto=format&fit=crop",
       highlights: ["Napoleon's Tomb", "Jacob's Ladder", "Diana's Peak National Park"]
-    },
-    {
-      name: "Ascension Island",
-      tagline: "A Volcanic Masterpiece",
-      desc: "Known for its unique 'Green Mountain' and its role as a vital communications hub. A paradise for turtle watching and exploring stark, beautiful volcanic landscapes.",
-      img: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop",
-      highlights: ["Green Mountain", "Turtle Nesting Beaches", "Comfortless Cove"]
-    },
-    {
-      name: "Tristan da Cunha",
-      tagline: "The Loneliest Island in the World",
-      desc: "The most remote inhabited archipelago on Earth. A place where time slows down and the community spirit is as strong as the Atlantic winds.",
-      img: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=2011&auto=format&fit=crop",
-      highlights: ["Edinburgh of the Seven Seas", "The Volcano", "Rockhopper Penguins"]
     }
   ];
 
@@ -33,11 +19,11 @@ export default function Destinations() {
         <div className="max-w-3xl">
           <h1 className="text-xs uppercase tracking-[0.4em] font-bold text-ocean-aqua mb-6">Our World</h1>
           <h2 className="text-5xl md:text-7xl font-display text-ocean-deep leading-tight mb-8">
-            The South Atlantic <br />Archipelago
+            The Jewel of the <br />South Atlantic
           </h2>
           <p className="text-ocean-deep/70 text-lg leading-relaxed">
-            Explore the three jewels of the British Overseas Territories. Each island offers a 
-            distinct personality, from the lush history of St Helena to the volcanic raw beauty of Ascension.
+            Explore St Helena, the secret paradise of the South Atlantic. 
+            From its lush history to its dramatic volcanic coastline, discover why this remote island is a world of its own.
           </p>
         </div>
       </section>

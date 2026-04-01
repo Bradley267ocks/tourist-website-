@@ -1,26 +1,23 @@
 import { motion } from "motion/react";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { toast } from "sonner";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    dates: "",
-    package: "General Enquiry",
-    message: ""
+    comment: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     toast.success("Redirecting to WhatsApp...");
     const text = `Hello Corkers! 
-Name: ${formData.name}
+Name: ${formData.firstName} ${formData.lastName}
 Email: ${formData.email}
-Dates: ${formData.dates}
-Package: ${formData.package}
-Message: ${formData.message}`;
+Comment: ${formData.comment}`;
     
     const encodedText = encodeURIComponent(text);
     setTimeout(() => {
@@ -36,14 +33,19 @@ Message: ${formData.message}`;
           animate={{ opacity: 1, y: 0 }}
           className="max-w-4xl"
         >
-          <h1 className="text-xs uppercase tracking-[0.4em] font-bold text-ocean-aqua mb-6">Get in Touch</h1>
+          <h1 className="text-xs uppercase tracking-[0.4em] font-bold text-ocean-aqua mb-6">Contact Us</h1>
           <h2 className="text-6xl md:text-[8vw] font-display uppercase tracking-tighter text-ocean-deep leading-[0.85] mb-12">
-            Start Your <br />Adventure
+            Visit Us in <br />Jamestown
           </h2>
-          <p className="text-xl text-ocean-deep/60 leading-relaxed max-w-2xl">
-            Our island experts are standing by to help you navigate the journey of a lifetime. 
-            Whether it's a simple question or a complex multi-island itinerary, we're here for you.
-          </p>
+          <div className="space-y-6 text-xl text-ocean-deep/60 leading-relaxed max-w-3xl">
+            <p>
+              Our business is strategically located in the historical city of Jamestown, the Island's capital and main sea access point to the Island.
+            </p>
+            <p className="text-sm uppercase tracking-widest font-bold text-ocean-deep/40">We are within close proximity of:</p>
+            <p className="text-base">
+              Accommodation Providers, Shipping and Air Services Agency, St Helena Museum, Swimming Pool, High Street Shops, Police and Medical Services, Garages, St James Church (the oldest Church in the Southern Hemisphere), Bars and Dining Venues, St Helena Government, Castle Gardens, Water Front, Pilling Primary School, Jacobs Ladder, plus many more amenities and attractions.
+            </p>
+          </div>
         </motion.div>
       </section>
 
@@ -54,8 +56,9 @@ Message: ${formData.message}`;
               <Phone size={28} />
             </div>
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-2">Call Us</h4>
-              <a href="tel:+29061078" className="text-2xl font-display text-ocean-deep hover:text-ocean-aqua transition-colors">+290 61078</a>
+              <h4 className="text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-2">Telephone & Fax</h4>
+              <p className="text-xl font-display text-ocean-deep">00 290 22735 or 22518</p>
+              <p className="text-sm text-ocean-deep/60">Fax: 00 290 22735</p>
             </div>
           </div>
 
@@ -65,7 +68,7 @@ Message: ${formData.message}`;
             </div>
             <div>
               <h4 className="text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-2">Email Us</h4>
-              <a href="mailto:corkerstouristservice@gmail.com" className="text-2xl font-display text-ocean-deep hover:text-ocean-aqua transition-colors">corkerstouristservice@gmail.com</a>
+              <a href="mailto:CorkersTouristService@helanta.co.sh" className="text-xl font-display text-ocean-deep hover:text-ocean-aqua transition-colors">CorkersTouristService@helanta.co.sh</a>
             </div>
           </div>
 
@@ -74,8 +77,10 @@ Message: ${formData.message}`;
               <MapPin size={28} />
             </div>
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-2">Visit Us</h4>
-              <p className="text-2xl font-display text-ocean-deep">Main Street, Jamestown, St Helena Island</p>
+              <h4 className="text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-2">Our Office</h4>
+              <p className="text-xl font-display text-ocean-deep">Tracey and Colin Corker</p>
+              <p className="text-lg text-ocean-deep/70">Main Street, Jamestown</p>
+              <p className="text-sm text-ocean-deep/60">St Helena Island, South Atlantic Ocean STHL 1ZZ</p>
             </div>
           </div>
 
@@ -97,65 +102,50 @@ Message: ${formData.message}`;
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Your Name</label>
+                <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">First Name *</label>
                 <input 
                   type="text" 
                   required
-                  value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  value={formData.firstName}
+                  onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                   className="w-full bg-island-sand/50 border border-ocean-deep/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-ocean-aqua transition-all"
-                  placeholder="John Doe"
+                  placeholder="First Name"
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Email Address</label>
-                <input 
-                  type="email" 
-                  required
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full bg-island-sand/50 border border-ocean-deep/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-ocean-aqua transition-all"
-                  placeholder="john@example.com"
-                />
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Travel Dates</label>
+                <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Last Name *</label>
                 <input 
                   type="text" 
-                  value={formData.dates}
-                  onChange={(e) => setFormData({...formData, dates: e.target.value})}
+                  required
+                  value={formData.lastName}
+                  onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                   className="w-full bg-island-sand/50 border border-ocean-deep/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-ocean-aqua transition-all"
-                  placeholder="e.g. Dec 2025"
+                  placeholder="Last Name"
                 />
-              </div>
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Interested In</label>
-                <select 
-                  value={formData.package}
-                  onChange={(e) => setFormData({...formData, package: e.target.value})}
-                  className="w-full bg-island-sand/50 border border-ocean-deep/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-ocean-aqua transition-all appearance-none"
-                >
-                  <option>General Enquiry</option>
-                  <option>Island Tours</option>
-                  <option>Flight Logistics</option>
-                  <option>Accommodation</option>
-                  <option>Full Travel Package</option>
-                </select>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Your Message</label>
+              <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Email *</label>
+              <input 
+                type="email" 
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({...formData, email: e.target.value})}
+                className="w-full bg-island-sand/50 border border-ocean-deep/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-ocean-aqua transition-all"
+                placeholder="john@example.com"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-widest text-ocean-deep/40 mb-3">Comment *</label>
               <textarea 
                 required
-                rows={4}
-                value={formData.message}
-                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                rows={6}
+                value={formData.comment}
+                onChange={(e) => setFormData({...formData, comment: e.target.value})}
                 className="w-full bg-island-sand/50 border border-ocean-deep/5 rounded-2xl px-6 py-4 focus:outline-none focus:border-ocean-aqua transition-all resize-none"
-                placeholder="Tell us about your travel plans..."
+                placeholder="How can we help you?"
               />
             </div>
 
@@ -163,7 +153,7 @@ Message: ${formData.message}`;
               type="submit"
               className="w-full bg-tropical-coral text-white py-5 rounded-2xl font-bold tracking-widest hover:bg-ocean-deep transition-all flex items-center justify-center gap-3 shadow-xl"
             >
-              SEND VIA WHATSAPP <MessageCircle size={20} />
+              SUBMIT VIA WHATSAPP <MessageCircle size={20} />
             </button>
           </form>
         </div>

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { toast } from "sonner";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 import { Calendar, Users, Mail, User, MessageSquare, ArrowRight } from "lucide-react";
 
 interface BookingPageProps {
@@ -29,7 +29,7 @@ export default function BookingPage({ type }: BookingPageProps) {
 
   const { title, subtitle } = config[type];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     toast.success("Request submitted! Redirecting to WhatsApp...");
     const text = `Hello Corkers! I'm interested in ${title}. 

@@ -40,7 +40,9 @@ export default function FAQ() {
 
         <div className="space-y-6">
           {faqs.map((faq, i) => (
-            <FAQItem key={i} faq={faq} />
+            <div key={i}>
+              <FAQItem faq={faq} />
+            </div>
           ))}
         </div>
       </section>

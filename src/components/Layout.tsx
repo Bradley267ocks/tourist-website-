@@ -31,10 +31,13 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-ocean-aqua rounded-lg rotate-3 flex items-center justify-center text-white font-bold text-xl shadow-lg">
-            C
-          </div>
+        <Link to="/" className="flex items-center gap-4">
+          <img 
+            src="https://i.ibb.co/k2BtjNjR/630255167-33922511610728446-7423915371207802672-n-removebg-preview.png" 
+            alt="Corkers Logo" 
+            className="h-12 w-auto"
+            referrerPolicy="no-referrer"
+          />
           <span className={`font-display text-2xl tracking-tight font-bold ${scrolled ? "text-ocean-deep" : "text-white"}`}>
             Corkers
           </span>
@@ -109,16 +112,19 @@ export function Footer() {
     <footer className="bg-ocean-deep text-white pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
         <div className="lg:col-span-1">
-          <Link to="/" className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-ocean-aqua rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              C
-            </div>
+          <Link to="/" className="flex items-center gap-4 mb-8">
+            <img 
+              src="https://i.ibb.co/k2BtjNjR/630255167-33922511610728446-7423915371207802672-n-removebg-preview.png" 
+              alt="Corkers Logo" 
+              className="h-10 w-auto"
+              referrerPolicy="no-referrer"
+            />
             <span className="font-display text-2xl tracking-tight font-bold">
               Corkers
             </span>
           </Link>
           <p className="text-white/60 leading-relaxed mb-8 text-sm">
-            Expert travel curators for St Helena, Ascension, and Tristan da Cunha. 
+            Expert travel curators for St Helena Island. 
             We turn remote dreams into seamless island realities.
           </p>
           <div className="flex gap-4">
@@ -149,6 +155,7 @@ export function Footer() {
           <ul className="space-y-4 text-sm">
             <li><Link to="/about" className="text-white/60 hover:text-white transition-colors">About Us</Link></li>
             <li><Link to="/faq" className="text-white/60 hover:text-white transition-colors">Travel FAQ</Link></li>
+            <li><Link to="/resources" className="text-white/60 hover:text-white transition-colors">Useful Links</Link></li>
             <li><Link to="/contact" className="text-white/60 hover:text-white transition-colors">Contact</Link></li>
             <li><Link to="/quote" className="text-white/60 hover:text-white transition-colors">Get a Quote</Link></li>
           </ul>
@@ -163,23 +170,26 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-4 text-white/60">
               <Phone size={20} className="text-ocean-aqua shrink-0" />
-              <a href="tel:+29061078" className="hover:text-white">+290 61078</a>
+              <div className="flex flex-col">
+                <a href="tel:+29022735" className="hover:text-white">00 290 22735</a>
+                <a href="tel:+29022518" className="hover:text-white">00 290 22518</a>
+              </div>
             </li>
             <li className="flex items-center gap-4 text-white/60">
               <Mail size={20} className="text-ocean-aqua shrink-0" />
-              <a href="mailto:corkerstouristservice@gmail.com" className="hover:text-white">corkerstouristservice@gmail.com</a>
+              <a href="mailto:CorkersTouristService@helanta.co.sh" className="hover:text-white">CorkersTouristService@helanta.co.sh</a>
             </li>
           </ul>
         </div>
       </div>
       
       <div className="max-w-7xl mx-auto px-6 mt-24 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] text-white/40 uppercase tracking-[0.2em]">
-        <p>© 2025 Corkers Tourist Service. All rights reserved.</p>
+        <p>© 2017 Corkers' Tourist Service, St Helena. All rights reserved.</p>
         <div className="flex gap-8">
           <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
           <Link to="/terms" className="hover:text-white">Terms of Service</Link>
         </div>
-        <p>Powered by <a href="https://vibrantws.co.za" target="_blank" className="text-ocean-aqua/60 hover:text-ocean-aqua">vibrantws.co.za</a></p>
+        <p>Power by <a href="https://vibrantws.co.za" target="_blank" className="text-ocean-aqua/60 hover:text-ocean-aqua">vibrantws.co.za</a></p>
       </div>
     </footer>
   );

@@ -2,14 +2,26 @@ import { motion } from "motion/react";
 
 export default function Gallery() {
   const images = [
-    { url: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2070&auto=format&fit=crop", title: "St Helena Coast" },
-    { url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop", title: "Diana's Peak" },
-    { url: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=2011&auto=format&fit=crop", title: "Remote Trails" },
-    { url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop", title: "Ascension Island" },
-    { url: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1933&auto=format&fit=crop", title: "Island Life" },
-    { url: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop", title: "South Atlantic" },
-    { url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop", title: "Jamestown" },
-    { url: "https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=1965&auto=format&fit=crop", title: "Nature" }
+    { url: "https://i.ibb.co/Xr55RXMx/photo-collection-of-st-helena-1.jpg", title: "Island Overview" },
+    { url: "https://i.ibb.co/fGSLD2CD/visitors-on-a-guided-tour.jpg", title: "Guided Tours" },
+    { url: "https://i.ibb.co/YBGnR2rn/tasting-the-st-helena-drinks.jpg", title: "Local Flavors" },
+    { url: "https://i.ibb.co/JWdBN6WB/the-boer-cemetery-1.jpg", title: "Boer Cemetery" },
+    { url: "https://i.ibb.co/fzgY9V34/plantation-house-3.jpg", title: "Plantation House" },
+    { url: "https://i.ibb.co/yFtkTp3h/peak-dale-1.jpg", title: "Peak Dale Nature" },
+    { url: "https://i.ibb.co/hR54T5wD/napoleon.jpg", title: "Napoleon Bonaparte" },
+    { url: "https://i.ibb.co/9mW879qy/longwood-house-orig.jpg", title: "Longwood House" },
+    { url: "https://i.ibb.co/9mPnjtHX/mg-0169.jpg", title: "Coastal Views" },
+    { url: "https://i.ibb.co/yLjbc0C/jean-accom.jpg", title: "Accommodation" },
+    { url: "https://i.ibb.co/VY4bMp9r/img-1908.jpg", title: "Island Scenery" },
+    { url: "https://i.ibb.co/SDq1gNF4/enjoying-a-night-out-orig.jpg", title: "Island Life" },
+    { url: "https://i.ibb.co/JSMF2D8/dscf1493.jpg", title: "Local Culture" },
+    { url: "https://i.ibb.co/fVphQNr1/class-afloat-021-orig.jpg", title: "Charabanc Experience" },
+    { url: "https://i.ibb.co/Q3KzhH2x/corkers-unique-tour-bus-2-orig.jpg", title: "Unique Tour Bus" },
+    { url: "https://i.ibb.co/V0ZwvXqr/diana-s-peak.jpg", title: "Diana's Peak" },
+    { url: "https://i.ibb.co/vxGXzpwb/boundary-wall-walk-2-orig.jpg", title: "Boundary Wall Walk" },
+    { url: "https://i.ibb.co/HD1XPWfx/1929-charabanc.jpg", title: "1929 Charabanc" },
+    { url: "https://i.ibb.co/v6H6B7mX/1929-charabanc-1.jpg", title: "Vintage Bus" },
+    { url: "https://i.ibb.co/s9LVC03D/1929-charabanc-on-tour.jpg", title: "On Tour" }
   ];
 
   return (

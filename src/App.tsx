@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import BookingPage from "./pages/BookingPage";
 import TourDetail from "./pages/TourDetail";
 import FAQ from "./pages/FAQ";
+import Resources from "./pages/Resources";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -39,6 +40,7 @@ export default function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/resources" element={<Resources />} />
             
             {/* CTA Pages */}
             <Route path="/book-tour" element={<BookingPage type="tour" />} />

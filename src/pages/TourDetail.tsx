@@ -4,41 +4,40 @@ import { ArrowLeft, CheckCircle2, Calendar, Clock, MapPin } from "lucide-react";
 
 const tourData: Record<string, any> = {
   historical: {
-    title: "Historical Tours",
-    hero: "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2070&auto=format&fit=crop",
-    desc: "Step back in time and explore the rich tapestry of St Helena's past. From the exile of Napoleon to the East India Company's maritime dominance, our historical tours offer a deep dive into the events that shaped the South Atlantic.",
-    includes: ["Expert local historian guide", "Entrance fees to all sites", "Private transportation", "Bottled water and snacks"],
+    title: "Historical Day Tour",
+    hero: "https://i.ibb.co/JWdBN6WB/the-boer-cemetery-1.jpg",
+    desc: "St Helena is steeped in history, from its discovery to the present day, and it is impossible to include all historic points of interest in a single tour. Our typical day tour offers a comprehensive look at the island's heritage.",
+    includes: ["Expert local guide", "Entrance fees to all sites", "Private transportation", "Bottled water and snacks"],
     itinerary: [
-      { time: "09:00", activity: "Jamestown Heritage Walk" },
-      { time: "11:00", activity: "The Castle & Gardens Tour" },
-      { time: "13:00", activity: "Traditional Saint Lunch" },
-      { time: "14:30", activity: "Longwood House (Napoleon's Residence)" },
-      { time: "16:30", activity: "Napoleon's Empty Tomb" }
+      { time: "09:00", activity: "Plantation House Grounds & Jonathan the Tortoise" },
+      { time: "11:00", activity: "Tour of Plantation House & St Paul’s Cathedral" },
+      { time: "12:30", activity: "Boer Cemetery & Princes Lodge" },
+      { time: "14:00", activity: "The Castell Collection" },
+      { time: "15:30", activity: "High Knoll Fort (Stunning Island Views)" }
+    ]
+  },
+  napoleon: {
+    title: "Napoleon's Life Tour",
+    hero: "https://i.ibb.co/hR54T5wD/napoleon.jpg",
+    desc: "Follow the Emperor's life on St Helena Island. Napoleon arrived on 15th October 1815 and died in 1821. Join us as we retrace his footsteps from Jamestown to his final resting place.",
+    includes: ["Specialist history guide", "Museum entry fees", "Distillery tasting", "Transportation"],
+    itinerary: [
+      { time: "09:00", activity: "Jamestown to the Museum at the Briars" },
+      { time: "11:00", activity: "Longwood House (Napoleon's Residence)" },
+      { time: "13:30", activity: "Napoleon's Tomb (His favorite walking place)" },
+      { time: "15:30", activity: "World's Most Remote Distillery (Brandy Tasting)" }
     ]
   },
   hiking: {
-    title: "Hiking & Nature",
-    hero: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2070&auto=format&fit=crop",
-    desc: "Experience the raw, volcanic beauty of St Helena on foot. Our hiking tours range from gentle walks through lush cloud forests to challenging scrambles across dramatic coastal ridges.",
-    includes: ["Certified mountain guide", "Walking poles (on request)", "Packed lunch", "First aid support"],
+    title: "Inspirational Hikes",
+    hero: "https://i.ibb.co/yFtkTp3h/peak-dale-1.jpg",
+    desc: "We offer inspirational hikes for both beginners and experienced hikers. Discover superb scenery, endemic plants, and historic sites where wartime cannons remain abandoned.",
+    includes: ["Certified hiking guide", "Safety briefing", "Packed lunch", "Walking tips and guidance"],
     itinerary: [
-      { time: "08:00", activity: "Diana's Peak Summit Hike" },
-      { time: "11:00", activity: "Endemic Flora Identification" },
-      { time: "13:00", activity: "Picnic at High Peak" },
-      { time: "14:30", activity: "Lot's Wife's Ponds Coastal Walk" }
-    ]
-  },
-  island: {
-    title: "Island Highlights",
-    hero: "https://images.unsplash.com/photo-1473625247510-8ceb1760943f?q=80&w=2011&auto=format&fit=crop",
-    desc: "Perfect for first-time visitors or those with limited time. This comprehensive tour covers the must-see landmarks and hidden gems that make St Helena unique.",
-    includes: ["Full-day guided transport", "Lunch at a local Saint home", "All site permits", "Photo opportunities at key viewpoints"],
-    itinerary: [
-      { time: "09:00", activity: "Jacob's Ladder Photo Op" },
-      { time: "10:30", activity: "Plantation House & Jonathan the Tortoise" },
-      { time: "12:30", activity: "Saint Helena Coffee Tasting" },
-      { time: "14:00", activity: "Sandy Bay Volcanic Formations" },
-      { time: "16:00", activity: "High Knoll Fort Sunset" }
+      { time: "08:00", activity: "Diana’s Peak (Cloud Forest & Endemics)" },
+      { time: "10:30", activity: "Lots Wife Ponds (Coastal Adventure)" },
+      { time: "13:00", activity: "Fairyland & Cason’s Forest" },
+      { time: "14:30", activity: "Plantation Forest & Jamestown Run" }
     ]
   },
   ocean: {

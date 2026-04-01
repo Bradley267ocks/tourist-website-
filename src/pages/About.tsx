@@ -17,12 +17,13 @@ export default function About() {
               Local Heart, <br />Global Standards
             </h2>
             <p className="text-ocean-deep/70 text-lg leading-relaxed mb-8">
-              Corkers Tourist Service was founded on a simple belief: that the world's most remote islands deserve the world's best travel service. 
-              As "Saints" (St Helenians) ourselves, we have lived the history and walked the trails we now share with you.
+              Corkers' Tourist Service is a family business which has been operating for 60+ years. 
+              We have a unique advantage over our competitors: we own and operate a vintage 1929 Charabanc open-topper, 
+              the only one of its kind used to take tourists around our beautiful island.
             </p>
             <p className="text-ocean-deep/70 text-lg leading-relaxed mb-10">
-              For over two decades, we have been the bridge between the South Atlantic and the rest of the world, 
-              providing seamless logistics, authentic storytelling, and a level of personal care that only a local family business can offer.
+              As "Saints" (St Helenians) ourselves, we have lived the history and walked the trails we now share with you. 
+              We invite you to enjoy the freedom of life on a tropical island that has not yet been discovered by the masses.
             </p>
             <Link to="/contact" className="bg-ocean-deep text-white px-10 py-4 rounded-full text-xs font-bold tracking-widest hover:bg-ocean-aqua transition-all inline-block">
               MEET THE TEAM
