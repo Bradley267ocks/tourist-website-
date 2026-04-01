@@ -73,9 +73,9 @@ export default function Home() {
           </div>
           <div className="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
             <img 
-              src="https://i.ibb.co/zHsxb1Zc/82-radioa-019.jpg" 
+              src="https://i.ibb.co/pB38Q1XH/632358506-1967972004068572-725345235656292566-n.jpg" 
               className="w-full h-full object-cover"
-              alt="St Helena Sea View"
+              alt="Island Life on St Helena"
               referrerPolicy="no-referrer"
             />
           </div>
